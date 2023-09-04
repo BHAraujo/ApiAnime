@@ -1,0 +1,31 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "",
+      "description": "",
+      "version": "1.0"
+    },
+    "produces": ["application/json"],
+    "host": "localhost:3000",
+    "basePath": "",
+    "paths": {
+      "/api/v1/animes": {
+        "post": {
+          "x-swagger-router-controller": "middleware-name1",
+          "operationId": "swagTest",
+          "tags": ["Anime"],
+          "description": "Cadastrar novo ANIME",
+          "parameters": [{"nome": "teste", "protagonista": "teste", "idade": 23}],
+          "responses": {}
+        },
+        "get": {
+            "x-swagger-router-controller": "middleware-name1",
+            "operationId": "swagTest",
+            "tags": ["Anime"],
+            "description": "Buscar todos os ANIMES cadastrados",
+            "parameters": [],
+            "responses": {}
+          }
+      }
+    }
+ }
