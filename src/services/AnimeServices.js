@@ -22,6 +22,15 @@ class AnimeQueries{
         })
     }
 
+    static animeFindLast(id){
+        return new Promise((accept, reject)=>{
+                 db.query('SELECT * FROM ANIME ORDER BY id DESC LIMIT 1', [id],(error, animes)=>{
+                 if(error) reject(error)
+                 accept(animes)
+                })
+        })
+    }
+
     static animeCreate(json){
         return new Promise((accept, reject)=>{  
             

@@ -11,13 +11,13 @@ routerAnimes.use('/api-docs', swaggerUi.serve);
 routerAnimes.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
 
-routerAnimes.get('/animes', AnimeControllers.animeGetAll)
-routerAnimes.get('/animes/:idanime', AnimeControllers.animeGetById)
 routerAnimes.post('/animes', AnimeControllers.animePost)
+routerAnimes.get('/animes', AnimeControllers.animeGetAll)
+routerAnimes.put('/animes', AnimeControllers.animePut)
 routerAnimes.patch('/animes', AnimeControllers.animePatch)
-routerAnimes.put('/animes', AnimeControllers.AnimePut)
-routerAnimes.delete('/animes/:animeId', AnimeControllers.AnimeDelete)
-
+routerAnimes.get('/animes/:idanime', AnimeControllers.animeGetById)
+routerAnimes.get('/animelast', AnimeControllers.animeGetLast)
+routerAnimes.delete('/animes/:animeId', AnimeControllers.animeDelete)
 
 
 module.exports = routerAnimes

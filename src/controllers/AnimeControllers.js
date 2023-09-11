@@ -40,6 +40,23 @@ class AnimeControllers extends AnimeQueries{
         
     }
 
+    static animeGetLast = async(req, resp)=>{
+        
+        let animes = await super.animeFindLast()
+        let json ={result: []}
+        
+        for(let i in animes){
+            json.result.push({
+            id: animes[i].id,    
+            nome: animes[i].nome,
+            protagonista: animes[i].protagonista,
+            idade: animes[i].idade,       
+        })    
+        }
+        resp.json(json)
+        
+    }
+
     static animePost = async(req, resp) =>{
         let valide_anime = fieldsValidation(req.body)
         if (valide_anime["error"] == false){
@@ -60,15 +77,14 @@ class AnimeControllers extends AnimeQueries{
         
    } 
 
-   static AnimePut = async(req, resp)=>{
+   static animePut = async(req, resp)=>{
     let anime_put = await super.animeUpdateAll(req.body)
-    console.log(anime_put + "into controller")
     if(anime_put == false) resp.json(anime_put).status(400)
     resp.json(anime_put).status(200)
    }
 
 
-   static AnimeDelete = async(req, resp)=>{
+   static animeDelete = async(req, resp)=>{
     let anime_del = await super.animeDeleteById(req.params.animeId)
     
     console.log(anime_del  + "Controler")

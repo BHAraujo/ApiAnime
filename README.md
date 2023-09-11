@@ -30,6 +30,13 @@ Configuração de Ambiente
    - Rodas os script db_sql.sql
    - Alterar as variáveis de ambiente do banco, caso necessário no arquivo:
        - variable.env
+       DBCLIENT_PORT=3306
+       DBCLIENT_HOSTNAME=localhost
+       DBCLIENT_DATABASE=dbAnime
+       DBCLIENT_PASSWORD=root123
+       DBCLIENT_USERNAME=root
+
+
 
 - Rodar o projeto 
    - npm start    

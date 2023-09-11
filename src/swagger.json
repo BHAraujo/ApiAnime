@@ -25,7 +25,53 @@
             "description": "Buscar todos os ANIMES cadastrados",
             "parameters": [],
             "responses": {}
+          },
+          "put": {
+            "x-swagger-router-controller": "middleware-name1",
+            "operationId": "swagTest",
+            "tags": ["Anime"],
+            "description": "Atualizar todos os campos do CADASTRADOS",
+            "parameters": [],
+            "responses": {}
+          },
+          "patch": {
+            "x-swagger-router-controller": "middleware-name1",
+            "operationId": "swagTest",
+            "tags": ["Anime"],
+            "description": "Atualizar um campo de cada vez",
+            "parameters": [],
+            "responses": {}
           }
+
+      },
+      "/api/v1/animeslast": {
+        "get": {
+          "x-swagger-router-controller": "middleware-name1",
+          "operationId": "swagTest",
+          "tags": ["Anime"],
+          "description": "Buscar o ÚLTIMO ANIME cadastrado",
+          "parameters": [{"nome": "teste", "protagonista": "teste", "idade": 23}],
+          "responses": {}
+        }
+      },
+      "/api/v1/animes/{idAnime}": {
+        "get": {
+          "x-swagger-router-controller": "middleware-name1",
+          "operationId": "swagTest",
+          "tags": ["Anime"],
+          "description": "Buscar ANIME cadastrado pelo ID",
+          "parameters": [{"nome": "teste", "protagonista": "teste", "idade": 23}],
+          "responses": {}
+        },
+        "delete": {
+            "x-swagger-router-controller": "middleware-name1",
+            "operationId": "swagTest",
+            "tags": ["Anime"],
+            "description": "Deletar ANIME CADASTRADO pelo ID",
+            "parameters": [],
+            "responses": {}
+          }
+
       }
     }
  }
